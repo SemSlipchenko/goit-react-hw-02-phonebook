@@ -3,6 +3,7 @@ import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 import { nanoid } from 'nanoid';
+import css from './App.module.scss';
 
 class App extends React.Component {
   state = {
@@ -58,7 +59,7 @@ class App extends React.Component {
     const { filter } = this.state;
     const showContacts = this.showContacts();
     return (
-      <div>
+      <div className={css.container}>
         <h2>Phonebook</h2>
         <ContactForm onSubmit={this.formSubmit} />
         <h2>Contacts</h2>
