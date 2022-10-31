@@ -6,7 +6,9 @@ const ContactList = ({ contacts, deleteContact }) => (
       <li className={css.item} key={id}>
         <p>{name}</p>
         <p>{number}</p>
-        <button onClick={() => deleteContact(id)}>Delete</button>
+        <button className={css.btn} onClick={() => deleteContact(id)}>
+          Delete
+        </button>
       </li>
     ))}
   </ul>
